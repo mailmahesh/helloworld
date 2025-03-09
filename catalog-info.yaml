@@ -1,27 +1,44 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-    name: a-hello-from-docker
-    description: A Express Server hello-from-docker
-    annotations:
-        'backstage.io/kubernetes-namespace': backstage
-    links:
-        - url: https://admin.example-org.com
-          title: Admin Dashboard
-          icon: dashboard
-          type: admin-dashboard
+  name: fee-engine-service
+  description: |
+    Fusion Fee Engine used to calculate and record Fees on accounts.
+  links:
+    - title: Git
+      url: https://code-test.ssnc.dev/backstage-demo/fee
+    - title: Documentation
+      url: https://code-test.ssnc.dev/backstage-demo/fee
+    - title: Designs 
+      url: https://code-test.ssnc.dev/backstage-demo/fee
+  annotations:
+    github.com/project-slug: backstage/backstage
+    backstage.io/techdocs-ref: dir:.
+    lighthouse.com/website-url: https://backstage.io
+    gocd.org/pipelines: backstage,backstage-pr,backstage-builder
 spec:
-    type: service
-    lifecycle: production
-    owner: idpadmins
-    system: project-x
+  type: service
+  owner:  alpha
+  lifecycle: experimental
+  providesApis:
+    - fee-engine-api
 
 ---
+
 apiVersion: backstage.io/v1alpha1
-kind: System
+kind: API
 metadata:
-    name: project-x
-    description: Handy tools to keep artists in the loop
+  namespace: default
+  name: fee-engine-api
+  description: Fee Engine API.
 spec:
-    owner: artist-relations-team
-    domain: artists
+  type: asyncapi
+  lifecycle: experimental
+  owner: alpha
+  definition: |
+    asyncapi: 3.0.0
+    info:
+      title: Fee Engine API
+      version: 1.0.0
+      description: "The Fee Engine API"
+    defaultContentType: application/json
