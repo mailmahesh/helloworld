@@ -16,7 +16,7 @@ metadata:
     backstage.io/techdocs-ref: dir:.
     lighthouse.com/website-url: https://backstage.io
     gocd.org/pipelines: backstage,backstage-pr,backstage-builder
-    'backstage.io/kubernetes-namespace': backstage
+    backstage.io/kubernetes-namespace: backstage
 spec:
   type: service
   owner:  alpha
