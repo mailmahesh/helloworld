@@ -7,7 +7,6 @@ metadata:
         'backstage.io/kubernetes-namespace': backstage
     tags:
         - Express
-        - NodeJs
     links:
         - url: https://admin.example-org.com
           title: Admin Dashboard
