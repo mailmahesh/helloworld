@@ -5,8 +5,6 @@ metadata:
     description: A Express Server hello-from-docker
     annotations:
         'backstage.io/kubernetes-namespace': backstage
-    tags:
-        - Express
     links:
         - url: https://admin.example-org.com
           title: Admin Dashboard
