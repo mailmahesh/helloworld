@@ -3,7 +3,7 @@ kind: Component
 metadata:
   name: helloworld
   description: |
-    Dockererixed Kubernetes Express Server App.
+    Dockererized Kubernetes Express Server App.
   links:
     - title: Git
       url: https://code-test.ssnc.dev/backstage-demo/fee
@@ -17,7 +17,7 @@ metadata:
     lighthouse.com/website-url: https://backstage.io
     gocd.org/pipelines: backstage,backstage-pr,backstage-builder
     backstage.io/kubernetes-namespace: backstage
-    backstage.io/kubernetes-id: helloworld
+    backstage.io/kubernetes-id: backstage
 spec:
   type: service
   owner:  alpha
