@@ -1,9 +1,9 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: fee-engine-service
+  name: helloworld
   description: |
-    Fusion Fee Engine used to calculate and record Fees on accounts.
+    Dockererixed Kubernetes Express Server App.
   links:
     - title: Git
       url: https://code-test.ssnc.dev/backstage-demo/fee
@@ -17,13 +17,13 @@ metadata:
     lighthouse.com/website-url: https://backstage.io
     gocd.org/pipelines: backstage,backstage-pr,backstage-builder
     backstage.io/kubernetes-namespace: backstage
-    backstage.io/kubernetes-id: backstage
+    backstage.io/kubernetes-id: helloworld
 spec:
   type: service
   owner:  alpha
   lifecycle: experimental
   providesApis:
-    - fee-engine-api
+    - docker-hello-world
 
 ---
 
@@ -31,7 +31,7 @@ apiVersion: backstage.io/v1alpha1
 kind: API
 metadata:
   namespace: default
-  name: fee-engine-api
+  name: helloworld
   description: Fee Engine API.
 spec:
   type: asyncapi
