@@ -18,7 +18,7 @@ metadata:
     gocd.org/pipelines: backstage,backstage-pr,backstage-builder
     backstage.io/kubernetes-namespace: backstage
     #backstage.io/kubernetes-id: helloworld
-    backstage.io/kubernetes-label-selector: 'helloworld'
+    backstage.io/kubernetes-label-selector: 'app:helloworld'
 spec:
   type: service
   owner:  alpha
